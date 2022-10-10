@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OOP_Project.AboutUs" Collapsed="true">
+    <Position X="1" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAACAAABAAAACEAAACAAAAAAAAgEAHAAAAAAA=</HashCode>
+      <FileName>AboutUs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Project.Accnt_Details" Collapsed="true">
+    <Position X="7.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>cAAAIAAAACAAABAAAACAAAACAAAQAAAAgGAHAAAgAAA=</HashCode>
+      <FileName>Accnt_Details.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Project.AdminFoodManagment" Collapsed="true">
+    <Position X="12.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAQACAgABAQAACAAABCAEg4DAAAEHAMAAAAAAA=</HashCode>
+      <FileName>AdminFoodManagment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Project.AdminHome" Collapsed="true">
+    <Position X="14.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACAAAACAAAAQAAAAAAEAAAAAAA=</HashCode>
+      <FileName>AdminHome.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Project.AdminUpdate" Collapsed="true">
+    <Position X="19.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAgAAEAA=</HashCode>
+      <FileName>AdminUpdate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Project.AdminUserDetails" Collapsed="true">
+    <Position X="3.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAIgAAAAAAEAEAAAAAAA=</HashCode>
+      <FileName>AdminUserDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Project.CheckOutCart" Collapsed="true">
+    <Position X="21" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAgAAAAAAAAAGA=</HashCode>
+      <FileName>CheckOutCart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Project.FoodItems" Collapsed="true">
+    <Position X="3.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAQABAAAAAAAAACQAgAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>FoodItems.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Project.Form1" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAACAAABAAAACAAACCAIQLAAAAgCQDAQBAAAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Project.FormControls" Collapsed="true">
+    <Position X="22.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAIAAAEA=</HashCode>
+      <FileName>FormControls.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Project.History" Collapsed="true">
+    <Position X="5.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAACAAABAAAACAAAACAAAAAAAAgEAHAAEAAAA=</HashCode>
+      <FileName>History.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Project.Home" Collapsed="true">
+    <Position X="10" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAgAAAAACAAAAAAAACAAAACAAAAAAAAgEAHAAAAAAA=</HashCode>
+      <FileName>Home.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Project.Login" Collapsed="true">
+    <Position X="24.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAIAQAECAAABAABACACADCIMw7gAME8CAHAwBAAAA=</HashCode>
+      <FileName>Login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Project.OrderPlacement" Collapsed="true">
+    <Position X="16.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/yAAIEAACCEgABARBICAAIACAEk4hEAgwHAfQIAQQDA=</HashCode>
+      <FileName>OrderPlacement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Project.Program" Collapsed="true">
+    <Position X="21" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Project.Registration" Collapsed="true">
+    <Position X="22.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/yACIAAgASAAABCKEACAAADCIMQ7EAAAkCIAAQBAALI=</HashCode>
+      <FileName>Registration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Project.User" Collapsed="true">
+    <Position X="21" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAACCAAAAABAAAgAAgAiAAACAAAAACDAAAQAQAEAAA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Project.Properties.Resources" Collapsed="true">
+    <Position X="24.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAEAAAAAAAABEAAgAQEAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Project.Properties.Settings" Collapsed="true">
+    <Position X="19.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

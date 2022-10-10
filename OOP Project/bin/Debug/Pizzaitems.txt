@@ -1,0 +1,5 @@
+Cheeze,P00,48,500
+Chicken,P01,40,600
+Shawarma,P03,46,650
+Beef,P04,46,700
+Vegetable,P05,34,475

@@ -1,0 +1,37 @@
+C:\Users\thefa\OneDrive\Documents\Visual Studio 2012\Projects\OOP Project\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+C:\Users\thefa\OneDrive\Documents\Visual Studio 2012\Projects\OOP Project\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\thefa\OneDrive\Documents\Visual Studio 2012\Projects\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+C:\Users\thefa\OneDrive\Documents\Visual Studio 2012\Projects\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
+C:\Users\thefa\OneDrive\Documents\Visual Studio 2012\Projects\OOP Project\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\thefa\OneDrive\Documents\Visual Studio 2012\Projects\OOP Project\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\thefa\OneDrive\Documents\Visual Studio 2012\Projects\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
+E:\OOP Project\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+E:\OOP Project\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+E:\OOP Project\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+E:\OOP Project\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+E:\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
+E:\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+E:\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
+C:\Users\HP\Desktop\OOP Project\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+C:\Users\HP\Desktop\OOP Project\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\HP\Desktop\OOP Project\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\HP\Desktop\OOP Project\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\HP\Desktop\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
+C:\Users\HP\Desktop\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+C:\Users\HP\Desktop\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
+C:\Users\HP\OOP Project\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+C:\Users\HP\OOP Project\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\HP\OOP Project\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\HP\OOP Project\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\HP\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
+C:\Users\HP\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+C:\Users\HP\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
+C:\Users\dell\OneDrive\Desktop\OOP Project\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+C:\Users\dell\OneDrive\Desktop\OOP Project\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\dell\OneDrive\Desktop\OOP Project\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\dell\OneDrive\Desktop\OOP Project\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\dell\OneDrive\Desktop\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\dell\OneDrive\Desktop\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\dell\OneDrive\Desktop\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
+C:\Users\dell\OneDrive\Desktop\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+C:\Users\dell\OneDrive\Desktop\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb

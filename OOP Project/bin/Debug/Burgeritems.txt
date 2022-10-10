@@ -1,0 +1,5 @@
+Beef,B00,17,111
+Chicken,B01,150,250
+DoubleCheese,B03,4,400
+Extraspicy,B04,46,400
+Zinger,B05,34,475

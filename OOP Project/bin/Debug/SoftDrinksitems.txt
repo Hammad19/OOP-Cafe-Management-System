@@ -1,0 +1,6 @@
+Pepsi 300ml,S00,36,50
+7up 300ml,S01,36,50
+Mirinda 300ml,S02,46,50
+Sting 300ml,S03,122,55
+Dew 300ml,S04,49,50
+Sprite 300ml,S07,50,49

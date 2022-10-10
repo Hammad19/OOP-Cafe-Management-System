@@ -1,0 +1,5 @@
+Cheeze,P00,49,500
+Chicken,P01,46,600
+Beef,P04,20,750
+Vegetable,P05,32,475
+Mexican,P06,35,1000

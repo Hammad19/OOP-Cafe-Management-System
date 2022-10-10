@@ -1,0 +1,3 @@
+C:\Users\thefa\OneDrive\Documents\Visual Studio 2012\Projects\OOP Project\DataAcessLayer\obj\Debug\DataAcessLayer.csprojResolveAssemblyReference.cache
+C:\Users\thefa\OneDrive\Documents\Visual Studio 2012\Projects\OOP Project\DataAcessLayer\obj\Debug\DataAcessLayer.Properties.Resources.resources
+C:\Users\thefa\OneDrive\Documents\Visual Studio 2012\Projects\OOP Project\DataAcessLayer\obj\Debug\DataAcessLayer.csproj.GenerateResource.Cache

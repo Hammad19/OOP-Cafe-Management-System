@@ -117,7 +117,6 @@ C:\Users\HP\OOP Project\OOP Project\bin\Debug\BusinessLogicLayer.pdb
 C:\Users\HP\OOP Project\OOP Project\bin\Debug\DataAccessLayer.pdb
 C:\Users\HP\OOP Project\OOP Project\obj\Debug\OOP Project.exe
 C:\Users\HP\OOP Project\OOP Project\obj\Debug\OOP Project.pdb
-C:\Users\dell\OneDrive\Desktop\OOP Project\OOP Project\obj\Debug\OOP Project.csproj.AssemblyReference.cache
 C:\Users\dell\OneDrive\Desktop\OOP Project\OOP Project\obj\Debug\OOP_Project.AboutUs.resources
 C:\Users\dell\OneDrive\Desktop\OOP Project\OOP Project\obj\Debug\OOP_Project.Accnt_Details.resources
 C:\Users\dell\OneDrive\Desktop\OOP Project\OOP Project\obj\Debug\OOP_Project.AdminFoodManagment.resources
@@ -133,6 +132,13 @@ C:\Users\dell\OneDrive\Desktop\OOP Project\OOP Project\obj\Debug\OOP_Project.Ord
 C:\Users\dell\OneDrive\Desktop\OOP Project\OOP Project\obj\Debug\OOP_Project.Properties.Resources.resources
 C:\Users\dell\OneDrive\Desktop\OOP Project\OOP Project\obj\Debug\OOP_Project.Registration.resources
 C:\Users\dell\OneDrive\Desktop\OOP Project\OOP Project\obj\Debug\OOP Project.csproj.GenerateResource.cache
-C:\Users\dell\OneDrive\Desktop\OOP Project\OOP Project\obj\Debug\OOP Project.csproj.CoreCompileInputs.cache
 C:\Users\dell\OneDrive\Desktop\OOP Project\OOP Project\obj\Debug\OOP Project.exe
 C:\Users\dell\OneDrive\Desktop\OOP Project\OOP Project\obj\Debug\OOP Project.pdb
+C:\Users\dell\OneDrive\Desktop\OOP Project\OOP Project\bin\Debug\OOP Project.exe.config
+C:\Users\dell\OneDrive\Desktop\OOP Project\OOP Project\bin\Debug\OOP Project.exe
+C:\Users\dell\OneDrive\Desktop\OOP Project\OOP Project\bin\Debug\OOP Project.pdb
+C:\Users\dell\OneDrive\Desktop\OOP Project\OOP Project\bin\Debug\BusinessLogicLayer.dll
+C:\Users\dell\OneDrive\Desktop\OOP Project\OOP Project\bin\Debug\DataAccessLayer.dll
+C:\Users\dell\OneDrive\Desktop\OOP Project\OOP Project\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\dell\OneDrive\Desktop\OOP Project\OOP Project\bin\Debug\DataAccessLayer.pdb
+C:\Users\dell\OneDrive\Desktop\OOP Project\OOP Project\obj\Debug\OOP Project.csprojResolveAssemblyReference.cache

@@ -64,7 +64,7 @@ namespace OOP_Project
 
         private void comboBox1_TextChanged(object sender, EventArgs e)
         {
-            Admin admin = new Admin();
+            Admin admin = Admin.GetInstance("adm123");
             if (comboBox1.SelectedItem.ToString() == "ALL")
             {
                 dataGridView1.Rows.Clear();

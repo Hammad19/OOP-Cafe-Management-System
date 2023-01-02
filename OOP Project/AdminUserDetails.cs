@@ -19,7 +19,7 @@ namespace OOP_Project
 
         private void AdminUserDetails_Load(object sender, EventArgs e)
         {
-            Admin admin = new Admin();
+            Admin admin = Admin.GetInstance("adm123");
             admin.ShowDetails(dataGridView1);
         }
 

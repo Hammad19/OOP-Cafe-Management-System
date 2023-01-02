@@ -13,8 +13,9 @@ namespace OOP_Project
     public class FoodItems
     {
         public string Name, Item_Code, FileName;
-        public int Qty, Price, Ordered;
+        public int Qty, Price,Total;
 
+        public FoodItems() { }
         public void ShowList(ComboBox cbx)
         {
             cbx.Items.Clear();
@@ -26,82 +27,100 @@ namespace OOP_Project
                 cbx.Items.Add(dt.Rows[i]["P_Name"].ToString());
             }
             
-            /*
-            StreamReader sr = new StreamReader(FileName + ".txt", true);
-            string[] values = new string[5];
-
-            string line;
-            while ((line = sr.ReadLine()) != null)
-            {
-                values = line.Split(',');
-                cbx.Items.Add(values[0]);
-            }
-            sr.Close();
-             */
         }
-
-        public void QuickLink(RadioButton r1,RadioButton r2,RadioButton r3,RadioButton r4,RadioButton r5)
+        
+    }
+    class Pizza : FoodItems
+    {
+        public Pizza()
         {
-            if (r1.Checked==true)
+            FormControls.QuickView = "Pizza";
+        }
+    }
+
+    class Burger : FoodItems
+    {
+        public Burger()
+        {
+            FormControls.QuickView = "Burger";
+        }
+    }
+
+    class Sandwiches : FoodItems
+    {
+        public Sandwiches()
+        {
+            FormControls.QuickView = "Sandwiches";
+        }
+    }
+
+    class Fries : FoodItems
+    {
+        public Fries()
+        {
+            FormControls.QuickView = "Fries";
+        }
+    }
+
+    class SoftDrinks : FoodItems
+    {
+        public SoftDrinks()
+        {
+            FormControls.QuickView = "SoftDrinks";
+        }
+    }
+
+
+
+    public class FoodFactory
+    {
+
+        FoodItems food;
+
+        public void CreateFoodItem(RadioButton r1, RadioButton r2, RadioButton r3, RadioButton r4, RadioButton r5)
+        {
+            if (r1.Checked == true)
             {
-                Pizza p = new Pizza();
+                 food = new Pizza();
             }
             else if (r2.Checked == true)
             {
-                Burger b = new Burger();
+                food = new Burger();
             }
             else if (r3.Checked == true)
             {
-                Sandwiches sd = new Sandwiches();
+                food = new Sandwiches();
             }
             else if (r4.Checked == true)
             {
-                Fries f = new Fries();
+                food = new Fries();
             }
             else if (r5.Checked == true)
             {
-                SoftDrinks sd = new SoftDrinks();
+                food = new SoftDrinks();
             }
+
         }
 
-        class Pizza:FoodItems
+    }
+
+
+   
+
+    public class OrderedItemsBuilder
+    {
+        private readonly OrderedItems orderedItems = new OrderedItems();
+
+        public OrderedItemsBuilder AddItem(FoodItems fooditem)
         {
-            public Pizza()
-            {
-                FormControls.QuickView = "Pizza";
-            }
+            orderedItems.AddItem(fooditem);
+            return this;
         }
 
-        class Burger : FoodItems
+        public OrderedItems Build()
         {
-            public Burger()
-            {
-                FormControls.QuickView = "Burger";
-            }
-        }
-
-        class Sandwiches : FoodItems
-        {
-            public Sandwiches()
-            {
-                FormControls.QuickView = "Sandwiches";
-            }
-        }
-
-        class Fries : FoodItems
-        {
-            public Fries()
-            {
-                FormControls.QuickView = "Fries";
-            }
-        }
-
-        class SoftDrinks : FoodItems
-        {
-            public SoftDrinks()
-            {
-                FormControls.QuickView = "SoftDrinks";
-            }
+            return orderedItems;
         }
     }
+
 }

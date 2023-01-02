@@ -16,7 +16,7 @@ namespace OOP_Project
     public partial class Registration : Form
     {
         Costumer u = new Costumer();
-        Validations validate = new Validations();
+        ValidationsController validate = new ValidationsController();
 
 
         public Registration()

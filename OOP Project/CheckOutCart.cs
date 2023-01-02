@@ -108,6 +108,9 @@ namespace OOP_Project
 
         public void FinalizeOrder(DataGridView dgv,int bill_id) //paisa minus
         {
+            //Builder Pattern
+            OrderedItems oi;
+            OrderedItemsBuilder builder = new OrderedItemsBuilder();
             Bll_Order ord = new Bll_Order();
             Bll_Bill bill = new Bll_Bill();
             Bll_Food food = new Bll_Food();
@@ -121,14 +124,19 @@ namespace OOP_Project
                     double Total_bill_for_Each_Row = 0;
                     Total_bill_for_Each_Row = (Convert.ToDouble(dgv.Rows[i].Cells[2].Value) * Convert.ToDouble(dgv.Rows[i].Cells[3].Value));
                     ord.AddOrder(dgv.Rows[i].Cells[0].Value.ToString(), dgv.Rows[i].Cells[1].Value.ToString(), dgv.Rows[i].Cells[2].Value.ToString(), dgv.Rows[i].Cells[3].Value.ToString(), Total_bill_for_Each_Row.ToString(), FormControls.Id);
-                    
+                    oi = new OrderedItems();
+                    oi.Name = dgv.Rows[i].Cells[1].Value.ToString();
+                    oi.Price = Convert.ToInt32(dgv.Rows[i].Cells[2].Value.ToString());
+                    oi.Qty = Convert.ToInt32(dgv.Rows[i].Cells[3].Value.ToString());
+                    oi.Total = Convert.ToInt32(Total_bill_for_Each_Row.ToString());
+                    builder.AddItem(oi);
                 }
                 MessageBox.Show("Order Placed");
-                double Total_bill = 0;
-                for (int ix = 0; ix < dgv.RowCount - 1; ix++)
-                {
-                    Total_bill += (Convert.ToDouble(dgv.Rows[ix].Cells[2].Value) * Convert.ToDouble(dgv.Rows[ix].Cells[3].Value));
-                }
+
+
+                OrderedItems OrderedItem = builder.Build();
+
+                int Total_bill = OrderedItem.GetTotalCost();
                 DateTime dt = DateTime.Now;
                 bill.AddBill(bill_id.ToString(), FormControls.Id, FormControls.Username, Convert.ToString(dt), Total_bill.ToString());
             }
@@ -140,7 +148,7 @@ namespace OOP_Project
 
         public void AddToCart(string category,string item,string numm,DataGridView dgv)  //qty minus
         {
-
+            
             Bll_Order a = new Bll_Order();
             DataTable dt = new DataTable();
             dt = a.SelectItemFromCat(category);
@@ -164,51 +172,9 @@ namespace OOP_Project
                     }
                 }
                 
-                /*
-                StreamReader sr = new StreamReader(category + "items.txt", true);
-                string line;
-                bool update = true;
-                string[] values = new string[4];
-
-                while ((line = sr.ReadLine()) != null)
-                {
-                    StreamWriter sw = new StreamWriter("temp.txt", true);
-                    values = line.Split(',');
-                    if (values[0] == item)
-                    {
-                        Int64 qty_chck = Convert.ToInt64(values[2]);
-                        if (qty_chck >= qty)
-                        {
-                            dgv.Rows.Add(category,item, values[3], qty, qty * Convert.ToInt32(values[3]));
-                            N_qty = Convert.ToInt32(values[2]) - qty;
-                            sw.WriteLine(values[0] + "," + values[1] + "," + N_qty + "," + values[3]);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Quantity Unavaliable. Stock Left = " + values[2]);
-                            update = false;
-                        }
-                    }
-                    else
-                    {
-                        sw.WriteLine(line);
-                    }
-                    sw.Close();
-                }
-                sr.Close();
-                sr.Dispose();
-                 */
+         
                 System.GC.Collect();
                 System.GC.WaitForPendingFinalizers();
-
-                /*
-                if (update == true)
-                {
-                    File.Delete(category + "items.txt");
-                    File.Move("temp.txt", category + "items.txt");
-                }
-                File.Delete("temp.txt");
-                 */
             }
 
             else

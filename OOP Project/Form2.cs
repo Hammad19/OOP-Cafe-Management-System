@@ -37,9 +37,17 @@ namespace OOP_Project
             cocx.BillShow(billid.ToString(), cosname, bill_date, total);
             bill_date.Text =dt.ToString();
             dgv.Rows.Clear();
+
+
+          
         }
 
         private void bill_date_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void total_Click(object sender, EventArgs e)
         {
 
         }

@@ -10,10 +10,65 @@ using System.Windows.Forms;
 
 namespace OOP_Project
 {
-    abstract class User
+
+    public class CustomerCollection
+    {
+        private List<Costumer> customer = new List<Costumer>();
+
+        public CustomerIterator GetIterator()
+        {
+            return new CustomerIterator(customer);
+        }
+
+        public void AddCustomer(Costumer customer)
+        {
+            this.customer.Add(customer);
+        }
+
+    }
+
+    public class CustomerIterator
+    {
+        private List<Costumer> customers;
+        public int index;
+
+        public CustomerIterator(List<Costumer> customers)
+        {
+            this.customers = customers;
+            index = 0;
+        
+        }
+
+        public bool HasNext()
+        {
+            return index < customers.Count;
+        }
+
+        public Costumer Next()
+        {
+            return customers[index++];
+            
+        }
+    }
+
+
+    public class User
     {
         string f_name, l_name, gender , city, country, email, date, phone_no;
 
+        public User() { }
+        public User(string FirstName,string LastName,string Gender,string City,string Country,string Phone,string Email,string DateOfBirth)
+        {
+            this.Firstname = FirstName;
+            this.Lastname = LastName;
+            this.Gender = Gender;
+            this.City = City;
+            this.Country = Country;
+            this.PhoneNumber = Phone;
+            this.Email = Email;
+            this.Date = DateOfBirth;
+
+        }
         //int pin;
           
 
@@ -76,18 +131,26 @@ namespace OOP_Project
         int err = 0, num;
         public static int rand_num,lgnfrm;
 
+
         
         
     
     }
         
-     class Costumer:User
+    public class Costumer:User
         
     {
 
         private int customerid;
             
         private int balance = 1000 ;
+
+        public Costumer() { }
+         public Costumer(string CustomerID,string FirstName,string LastName,string Gender,string City,string Country,string Phone,string Email,string DateOfBirth,string Balance):base(FirstName,LastName,Gender,City,Country,Phone,Email,DateOfBirth)
+        {
+            this.CustomerID = Convert.ToInt32(CustomerID);
+            this.balance = Convert.ToInt32(Balance);
+        }
 
         public int Balance { get { return balance; } set { balance = value; } }
             public int CustomerID
@@ -96,11 +159,7 @@ namespace OOP_Project
                 set { customerid = value; }
             }
 
-            //public int CustomerID
-            //{
-            //    get { return customerid; }
-            //    set { customerid = value; }
-            //}
+       
 
         
         public void SetAllData(string idd,string fnamee, string lnamee, RadioButton male, RadioButton female, string cityy, string countryy, string phonenoo, string eemaill, DateTimePicker bbday)
@@ -184,8 +243,8 @@ namespace OOP_Project
         public void UpdateCostumer()
         {
                             
-            Bll_Customer obj = new Bll_Customer();
-            obj.UpdateCustomer(CustomerID.ToString(), Firstname, Lastname, Gender, City, Country, PhoneNumber, Email, Date, Balance.ToString());
+           Bll_Customer obj = new Bll_Customer();
+           obj.UpdateCustomer(CustomerID.ToString(), Firstname, Lastname, Gender, City, Country, PhoneNumber, Email, Date, Balance.ToString());
            FormControls.registrationclose = "Yes";
            MessageBox.Show("Updation Sucessfull");
                         
@@ -195,10 +254,9 @@ namespace OOP_Project
         {
                         
             Bll_Customer obj = new Bll_Customer();             
-            obj.RegisterCustomer(CustomerID.ToString(), Firstname, Lastname, Gender, City, Country, PhoneNumber, Email, Date, Balance.ToString()); 
-                           
+            obj.RegisterCustomer(CustomerID.ToString(), Firstname, Lastname, Gender, City, Country, PhoneNumber, Email, Date, Balance.ToString());                   
             FormControls.registrationclose = "Yes";
-                
+
             MessageBox.Show("Registration Sucessfull");
                      
         }
@@ -236,7 +294,6 @@ namespace OOP_Project
             public void ShowDetails(Label a,Label b,Label c,Label d,Label e,Label f,Label g,Label h,Label i,Label j)
             
             {
-
 
                 a.Text = "Unique Id Is " + CustomerID.ToString();             
                 b.Text = "Remaining Balance " + balance.ToString();           
@@ -292,26 +349,39 @@ namespace OOP_Project
                 }
 
             }
-
-        
-
-
-        
-        
-
     }
 
-     class Admin : User
+     sealed class Admin
+
+
      {
-         public static  string Adminid = "adm123";
+         private string Adminid;
          public string AdminID
          {
              get { return Adminid; }
              set { Adminid = value; }
          }
 
+         private Admin() { }
+         private Admin(string AdminID)
+         { this.AdminID = AdminID; }
+
+         private static Admin instance;
+
+         public static Admin GetInstance(string ID)
+         {
+             if(instance == null)
+             {
+                 instance = new Admin(ID);
+             }
+             return instance;
+
+         }
+
+
          public  void UserHistory(DataGridView dgv)
          {
+             
              Bll_Order search = new Bll_Order();
              DataTable dt = new DataTable();
              dt = search.ShowOrderHistory();
@@ -321,15 +391,34 @@ namespace OOP_Project
                  dgv.Rows.Add(dt.Rows[i]["O_Category"].ToString(), dt.Rows[i]["O_Name"].ToString(), dt.Rows[i]["O_UnitPrice"].ToString(), dt.Rows[i]["O_Qty"].ToString(), dt.Rows[i]["O_Total"].ToString());
              }
          }
-         public void ShowDetails(DataGridView dgv)
+
+         public void GetDetails(DataGridView dgv, CustomerCollection customerCollection)
          {
+             Costumer c;
              Bll_Customer search = new Bll_Customer();
              DataTable dt = new DataTable();
              dt = search.ShowDetailsForAdmin();
 
              for (int i = 0; i < dt.Rows.Count; i++)
              {
-                 dgv.Rows.Add(dt.Rows[i]["ID"].ToString(), dt.Rows[i]["F_Name"].ToString(), dt.Rows[i]["L_Name"].ToString(), dt.Rows[i]["Gender"].ToString(), dt.Rows[i]["City"].ToString(), dt.Rows[i]["Country"].ToString(), dt.Rows[i]["Phone"].ToString(), dt.Rows[i]["Email"].ToString(), dt.Rows[i]["DOB"].ToString(), dt.Rows[i]["Balance"].ToString());
+                 c = new Costumer(dt.Rows[i]["ID"].ToString(), dt.Rows[i]["F_Name"].ToString(), dt.Rows[i]["L_Name"].ToString(), dt.Rows[i]["Gender"].ToString(), dt.Rows[i]["City"].ToString(), dt.Rows[i]["Country"].ToString(), dt.Rows[i]["Phone"].ToString(), dt.Rows[i]["Email"].ToString(), dt.Rows[i]["DOB"].ToString(), dt.Rows[i]["Balance"].ToString());
+                 customerCollection.AddCustomer(c);
+
+             }
+
+         }
+
+
+         public void ShowDetails(DataGridView dgv)
+         {
+             Costumer c;
+             CustomerCollection customerCollection = new CustomerCollection();
+             GetDetails(dgv, customerCollection);
+             CustomerIterator customeriterator = customerCollection.GetIterator();
+             while (customeriterator.HasNext())
+             {
+                 c = customeriterator.Next();
+                 dgv.Rows.Add(c.CustomerID.ToString(), c.Firstname, c.Lastname, c.Gender, c.City, c.Country, c.PhoneNumber, c.Email, c.Date, c.Balance);
              }
          }
 
@@ -347,17 +436,16 @@ namespace OOP_Project
 
          public void ShowBill(DataGridView dgv,string customerid)
          {
+             
              Bll_Bill search = new Bll_Bill();
              DataTable dt = new DataTable();
              dt = search.BillsWithResToCustomer(customerid);
 
              for (int i = 0; i < dt.Rows.Count; i++)
              {
+
                  dgv.Rows.Add(dt.Rows[i]["Bill_ID"].ToString(), dt.Rows[i]["CUS_ID"].ToString(), dt.Rows[i]["CUS_NAME"].ToString(), dt.Rows[i]["Bill_Date"].ToString(), dt.Rows[i]["Bill_AMOUNT"].ToString());
              }
-         }
-
-
-     
+         } 
      }
 }

@@ -11,10 +11,73 @@ namespace OOP_Project
     class Validations
     {
 
+        public bool ValidateName(string name)
+        {
+
+            if (Regex.IsMatch(name, "^[A-Z][a-zA-Z]*$"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool ValidateNumber(string number)
+        {
+            if (Regex.IsMatch(number, @"^((\+92)|(0092))-{0,1}\d{3}-{0,1}\d{7}$|^\d{11}$|^\d{4}-\d{7}$"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool ValidateEmail(string email)
+        {
+            if (Regex.IsMatch(email, @"^([\w\.\-]+)@((?!\.|\-)[\w\-]+)((\.(\w){2,3})+)$"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool ValidateCity(string city)
+        {
+            if (Regex.IsMatch(city, @"^[a-zA-Z]+$"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool ValidateCountry(string country)
+        {
+            if (Regex.IsMatch(country, @"^[a-zA-Z]+$"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+
+    class ValidationsController
+    {
+        Validations validation = new Validations();
         public void IsName(TextBox name, ErrorProvider error)
         {
 
-            if (Regex.IsMatch(name.Text, "^[A-Z][a-zA-Z]*$"))
+            if (validation.ValidateName(name.Text))
             {
                 error.Clear();
             }
@@ -27,7 +90,7 @@ namespace OOP_Project
 
         public void IsNumber(TextBox number, ErrorProvider error)
         {
-            if (Regex.IsMatch(number.Text, @"^((\+92)|(0092))-{0,1}\d{3}-{0,1}\d{7}$|^\d{11}$|^\d{4}-\d{7}$"))
+            if (validation.ValidateNumber(number.Text))
             {
                 error.Clear();
             }
@@ -39,7 +102,7 @@ namespace OOP_Project
         }
         public void IsEmail(TextBox email, ErrorProvider error)
         {
-            if (Regex.IsMatch(email.Text, @"^([\w\.\-]+)@((?!\.|\-)[\w\-]+)((\.(\w){2,3})+)$"))
+            if (validation.ValidateEmail(email.Text))
             {
                 error.Clear();
             }
@@ -51,7 +114,7 @@ namespace OOP_Project
         }
         public void IsCity(TextBox city, ErrorProvider error)
         {
-            if (Regex.IsMatch(city.Text, @"^[a-zA-Z]+$"))
+            if (validation.ValidateCity(city.Text))
             {
                 error.Clear();
             }
@@ -64,7 +127,7 @@ namespace OOP_Project
 
         public void IsCountry(TextBox country, ErrorProvider error)
         {
-            if (Regex.IsMatch(country.Text, @"^[a-zA-Z]+$"))
+            if (validation.ValidateCountry(country.Text))
             {
                 error.Clear();
             }

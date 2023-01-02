@@ -19,7 +19,7 @@ namespace OOP_Project
 
         private void History_Load(object sender, EventArgs e)
         {
-            Admin admin = new Admin();
+            Admin admin = Admin.GetInstance("adm123");
             Costumer u = new Costumer();
             
             if (FormControls.Id == admin.AdminID)

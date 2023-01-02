@@ -13,7 +13,6 @@ namespace OOP_Project
     class AdminControls
        
     {
-        
         public void AddUserIDtoCombobox(ComboBox comboBox1)
         {
             Bll_Customer x = new Bll_Customer();
@@ -115,7 +114,7 @@ namespace OOP_Project
         }
     }
 
-    class OrderedItems : Food
+    public class OrderedItems : FoodItems
     {
         int countorders;
         public int COUNTORDERS { get { return countorders; } }
@@ -124,6 +123,24 @@ namespace OOP_Project
         int SoftDrinksCounts ;
         int FriesCount ;
         int SandwichCount ;
+
+        private readonly List<FoodItems> itemss = new List<FoodItems>();
+
+        public void AddItem(FoodItems item)
+        {
+            itemss.Add(item);
+        }
+
+        public int GetTotalCost()
+        {
+            int cost = 0;
+            foreach (FoodItems item in itemss)
+            {
+                cost += item.Total;
+            }
+            return cost;
+        }
+
         public OrderedItems()
         {
             burgerCounts = 0;
@@ -284,9 +301,19 @@ namespace OOP_Project
 
         public void BillGetData(DataGridView dgv, DataGridView dgv1) //paisa minus
         {
+            OrderedItems oi;
+            OrderedItemsBuilder builder = new OrderedItemsBuilder();
 
+            //builder.AddItem();
             for (int i = 0; i < dgv.RowCount - 1; i++)
             {
+                oi = new OrderedItems();
+                oi.Name = dgv.Rows[i].Cells[1].Value.ToString();
+                oi.Price = Convert.ToInt32(dgv.Rows[i].Cells[2].Value.ToString());
+                oi.Qty = Convert.ToInt32(dgv.Rows[i].Cells[3].Value.ToString());
+                oi.Total = Convert.ToInt32(dgv.Rows[i].Cells[4].Value.ToString());
+
+                builder.AddItem(oi);
                 dgv1.Rows.Add(dgv.Rows[i].Cells[1].Value.ToString(), dgv.Rows[i].Cells[2].Value.ToString(), dgv.Rows[i].Cells[3].Value.ToString(), dgv.Rows[i].Cells[4].Value.ToString());
             }
         }

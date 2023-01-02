@@ -14,11 +14,12 @@ namespace OOP_Project
     public partial class Login : Form
     {
 
-      
+        Admin admin;
         
         public Login()
         {
             InitializeComponent();
+             admin = Admin.GetInstance("adm123");
         }
 
        
@@ -133,10 +134,10 @@ namespace OOP_Project
 
         private void button9_Click(object sender, EventArgs e)
         {
-            if ((textBox2.Text == "admin") && (textBox4.Text == Admin.Adminid))
+            if ((textBox2.Text == "admin") && (textBox4.Text == admin.AdminID))
             {
                 FormControls.Id= textBox2.Text;
-                Admin.Adminid = textBox2.Text;
+                admin.AdminID = textBox2.Text;
                 this.Hide();
                 AdminHome a1 = new AdminHome();
                 a1.FormClosed += (a,b) => this.Close();

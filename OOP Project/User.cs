@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace OOP_Project
 {
 
@@ -243,18 +242,18 @@ namespace OOP_Project
         public void UpdateCostumer()
         {
                             
-           Bll_Customer obj = new Bll_Customer();
-           obj.UpdateCustomer(CustomerID.ToString(), Firstname, Lastname, Gender, City, Country, PhoneNumber, Email, Date, Balance.ToString());
-           FormControls.registrationclose = "Yes";
-           MessageBox.Show("Updation Sucessfull");
+           //Bll_Customer obj = new Bll_Customer();
+           //obj.UpdateCustomer(CustomerID.ToString(), Firstname, Lastname, Gender, City, Country, PhoneNumber, Email, Date, Balance.ToString());
+           //FormControls.registrationclose = "Yes";
+           //MessageBox.Show("Updation Sucessfull");
                         
         }
 
         public void Registration()
         {
-                        
-            Bll_Customer obj = new Bll_Customer();             
-            obj.RegisterCustomer(CustomerID.ToString(), Firstname, Lastname, Gender, City, Country, PhoneNumber, Email, Date, Balance.ToString());                   
+
+            Bll_Customer customer = new Bll_Customer();   
+            customer.RegisterCustomer(CustomerID.ToString(), Firstname, Lastname, Gender, City, Country, PhoneNumber, Email, Date, Balance.ToString());                   
             FormControls.registrationclose = "Yes";
 
             MessageBox.Show("Registration Sucessfull");
@@ -264,31 +263,31 @@ namespace OOP_Project
         public void GetDetails()
         {
 
-            Firstname = FormControls.Username;
-            CustomerID = Convert.ToInt32(FormControls.Id);
-            Bll_Customer login = new Bll_Customer();
-            DataTable dt = new DataTable();
-            dt = login.LoginCustomer(CustomerID.ToString());
-            if (dt.Rows.Count > 0)
-            {
-                if (CustomerID.ToString() == dt.Rows[0]["ID"].ToString())
-                {
-                    if (Firstname == dt.Rows[0]["F_Name"].ToString())
-                    {
-                        CustomerID = Convert.ToInt32(dt.Rows[0]["ID"]);
-                        balance = Convert.ToInt32(dt.Rows[0]["Balance"]);
-                        Firstname = Convert.ToString(dt.Rows[0]["F_Name"]);
-                        Lastname = Convert.ToString(dt.Rows[0]["L_Name"]);
-                        Gender = Convert.ToString(dt.Rows[0]["Gender"]);
-                        Date = Convert.ToString(dt.Rows[0]["DOB"]);
-                        City = Convert.ToString(dt.Rows[0]["City"]);
-                        Country = Convert.ToString(dt.Rows[0]["Country"]);
-                        PhoneNumber = Convert.ToString(dt.Rows[0]["Phone"]);
-                        Email = Convert.ToString(dt.Rows[0]["Email"]);
+            //Firstname = FormControls.Username;
+            //CustomerID = Convert.ToInt32(FormControls.Id);
+            //Bll_Customer login = new Bll_Customer();
+            //DataTable dt = new DataTable();
+            //dt = login.LoginCustomer(CustomerID.ToString());
+            //if (dt.Rows.Count > 0)
+            //{
+            //    if (CustomerID.ToString() == dt.Rows[0]["ID"].ToString())
+            //    {
+            //        if (Firstname == dt.Rows[0]["F_Name"].ToString())
+            //        {
+            //            CustomerID = Convert.ToInt32(dt.Rows[0]["ID"]);
+            //            balance = Convert.ToInt32(dt.Rows[0]["Balance"]);
+            //            Firstname = Convert.ToString(dt.Rows[0]["F_Name"]);
+            //            Lastname = Convert.ToString(dt.Rows[0]["L_Name"]);
+            //            Gender = Convert.ToString(dt.Rows[0]["Gender"]);
+            //            Date = Convert.ToString(dt.Rows[0]["DOB"]);
+            //            City = Convert.ToString(dt.Rows[0]["City"]);
+            //            Country = Convert.ToString(dt.Rows[0]["Country"]);
+            //            PhoneNumber = Convert.ToString(dt.Rows[0]["Phone"]);
+            //            Email = Convert.ToString(dt.Rows[0]["Email"]);
                       
-                    }
-                }
-            }
+            //        }
+            //    }
+            //}
         }
 
             public void ShowDetails(Label a,Label b,Label c,Label d,Label e,Label f,Label g,Label h,Label i,Label j)
@@ -394,17 +393,17 @@ namespace OOP_Project
 
          public void GetDetails(DataGridView dgv, CustomerCollection customerCollection)
          {
-             Costumer c;
-             Bll_Customer search = new Bll_Customer();
-             DataTable dt = new DataTable();
-             dt = search.ShowDetailsForAdmin();
+             //Costumer c;
+             //Bll_Customer search = new Bll_Customer();
+             //DataTable dt = new DataTable();
+             //dt = search.ShowDetailsForAdmin();
 
-             for (int i = 0; i < dt.Rows.Count; i++)
-             {
-                 c = new Costumer(dt.Rows[i]["ID"].ToString(), dt.Rows[i]["F_Name"].ToString(), dt.Rows[i]["L_Name"].ToString(), dt.Rows[i]["Gender"].ToString(), dt.Rows[i]["City"].ToString(), dt.Rows[i]["Country"].ToString(), dt.Rows[i]["Phone"].ToString(), dt.Rows[i]["Email"].ToString(), dt.Rows[i]["DOB"].ToString(), dt.Rows[i]["Balance"].ToString());
-                 customerCollection.AddCustomer(c);
+             //for (int i = 0; i < dt.Rows.Count; i++)
+             //{
+             //    c = new Costumer(dt.Rows[i]["ID"].ToString(), dt.Rows[i]["F_Name"].ToString(), dt.Rows[i]["L_Name"].ToString(), dt.Rows[i]["Gender"].ToString(), dt.Rows[i]["City"].ToString(), dt.Rows[i]["Country"].ToString(), dt.Rows[i]["Phone"].ToString(), dt.Rows[i]["Email"].ToString(), dt.Rows[i]["DOB"].ToString(), dt.Rows[i]["Balance"].ToString());
+             //    customerCollection.AddCustomer(c);
 
-             }
+             //}
 
          }
 

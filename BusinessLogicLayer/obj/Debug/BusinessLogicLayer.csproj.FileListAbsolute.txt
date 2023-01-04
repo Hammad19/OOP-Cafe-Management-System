@@ -32,4 +32,6 @@ C:\Users\dell\OneDrive\Desktop\OOP Project\BusinessLogicLayer\bin\Debug\DataAcce
 C:\Users\dell\OneDrive\Desktop\OOP Project\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
 C:\Users\dell\OneDrive\Desktop\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
 C:\Users\dell\OneDrive\Desktop\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
-C:\Users\dell\OneDrive\Desktop\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
+C:\Users\dell\OneDrive\Desktop\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\dell\OneDrive\Desktop\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\dell\OneDrive\Desktop\OOP Project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete

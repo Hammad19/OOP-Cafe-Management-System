@@ -13,6 +13,11 @@ namespace OOP_Project
     public class FoodItems
     {
         public string Name, Item_Code, FileName;
+
+        public string GetFileName()
+        {
+            return FileName;
+        }
         public int Qty, Price,Total;
 
         public FoodItems() { }
@@ -34,7 +39,8 @@ namespace OOP_Project
     {
         public Pizza()
         {
-            FormControls.QuickView = "Pizza";
+            FileName = "Pizza";
+            //FormControls.QuickView = "Pizza";
         }
     }
 
@@ -42,7 +48,8 @@ namespace OOP_Project
     {
         public Burger()
         {
-            FormControls.QuickView = "Burger";
+            FileName = "Burger";
+            //FormControls.QuickView = "Burger";
         }
     }
 
@@ -50,7 +57,8 @@ namespace OOP_Project
     {
         public Sandwiches()
         {
-            FormControls.QuickView = "Sandwiches";
+            FileName = "Sandwiches";
+            //FormControls.QuickView = "Sandwiches";
         }
     }
 
@@ -58,7 +66,8 @@ namespace OOP_Project
     {
         public Fries()
         {
-            FormControls.QuickView = "Fries";
+            FileName = "Fries";
+            //FormControls.QuickView = "Fries";
         }
     }
 
@@ -66,7 +75,8 @@ namespace OOP_Project
     {
         public SoftDrinks()
         {
-            FormControls.QuickView = "SoftDrinks";
+            FileName = "SoftDrinks";
+            //FormControls.QuickView = "SoftDrinks";
         }
     }
 
@@ -77,8 +87,9 @@ namespace OOP_Project
 
         FoodItems food;
 
-        public void CreateFoodItem(RadioButton r1, RadioButton r2, RadioButton r3, RadioButton r4, RadioButton r5)
+        public FoodItems CreateFoodItem(RadioButton r1, RadioButton r2, RadioButton r3, RadioButton r4, RadioButton r5)
         {
+           
             if (r1.Checked == true)
             {
                  food = new Pizza();
@@ -99,6 +110,8 @@ namespace OOP_Project
             {
                 food = new SoftDrinks();
             }
+
+            return food;
 
         }
 

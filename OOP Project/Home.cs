@@ -64,7 +64,8 @@ namespace OOP_Project
         private void button9_Click(object sender, EventArgs e)
         {
             FoodFactory foodfactory = new FoodFactory();
-            foodfactory.CreateFoodItem(radioButton1,radioButton2,radioButton3,radioButton4,radioButton5);
+            FoodItems fooditem = foodfactory.CreateFoodItem(radioButton1,radioButton2,radioButton3,radioButton4,radioButton5);
+            FormControls.QuickView = fooditem.GetFileName();
             this.Hide();
             OrderPlacement op = new OrderPlacement();
             op.FormClosed += (a, b) => this.Close();

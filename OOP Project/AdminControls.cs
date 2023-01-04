@@ -113,7 +113,7 @@ namespace OOP_Project
         }
     }
 
-    public class OrderedItems:FoodItems
+    public class OrderedItems
     {
         int countorders;
         public int COUNTORDERS { get { return countorders; } }
@@ -300,13 +300,13 @@ namespace OOP_Project
 
         public void BillGetData(DataGridView dgv, DataGridView dgv1) //paisa minus
         {
-            OrderedItems oi;
+            FoodItems oi;
             OrderedItemsBuilder builder = new OrderedItemsBuilder();
 
             //builder.AddItem();
             for (int i = 0; i < dgv.RowCount - 1; i++)
             {
-                oi = new OrderedItems();
+                oi = new FoodItems();
                 oi.Name = dgv.Rows[i].Cells[1].Value.ToString();
                 oi.Price = Convert.ToInt32(dgv.Rows[i].Cells[2].Value.ToString());
                 oi.Qty = Convert.ToInt32(dgv.Rows[i].Cells[3].Value.ToString());

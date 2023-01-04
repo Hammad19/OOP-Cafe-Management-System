@@ -374,24 +374,23 @@ namespace OOP_Project
 
 
      {
-         private string Adminid;
-         public string AdminID
-         {
-             get { return Adminid; }
-             set { Adminid = value; }
-         }
 
-         private Admin() { }
-         private Admin(string AdminID)
-         { this.AdminID = AdminID; }
+        public string AdminID { get; set; }
+        public string AdminPassword { get; set; }
+
+        private Admin() { }
+         private Admin(string AdminID, string AdminPassword)
+         { this.AdminID = AdminID;
+            this.AdminPassword = AdminPassword;
+                }
 
          private static Admin instance;
 
-         public static Admin GetInstance(string ID)
+         public static Admin GetInstance()
          {
              if(instance == null)
              {
-                 instance = new Admin(ID);
+                 instance = new Admin("admin","adm123");
              }
              return instance;
 

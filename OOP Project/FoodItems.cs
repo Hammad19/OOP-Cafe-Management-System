@@ -40,7 +40,6 @@ namespace OOP_Project
         public Pizza()
         {
             FileName = "Pizza";
-            //FormControls.QuickView = "Pizza";
         }
     }
 
@@ -49,7 +48,7 @@ namespace OOP_Project
         public Burger()
         {
             FileName = "Burger";
-            //FormControls.QuickView = "Burger";
+          
         }
     }
 
@@ -58,7 +57,7 @@ namespace OOP_Project
         public Sandwiches()
         {
             FileName = "Sandwiches";
-            //FormControls.QuickView = "Sandwiches";
+           
         }
     }
 
@@ -67,7 +66,7 @@ namespace OOP_Project
         public Fries()
         {
             FileName = "Fries";
-            //FormControls.QuickView = "Fries";
+            
         }
     }
 
@@ -76,7 +75,7 @@ namespace OOP_Project
         public SoftDrinks()
         {
             FileName = "SoftDrinks";
-            //FormControls.QuickView = "SoftDrinks";
+            
         }
     }
 

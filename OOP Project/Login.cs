@@ -14,7 +14,7 @@ namespace OOP_Project
     public partial class Login : Form
     {
 
-        Admin admin = Admin.GetInstance("adm123");
+        
         
         public Login()
         {
@@ -134,7 +134,9 @@ namespace OOP_Project
 
         private void button9_Click(object sender, EventArgs e)
         {
-            if ((textBox2.Text == "admin") && (textBox4.Text == admin.AdminID))
+
+            Admin admin = Admin.GetInstance();
+            if ((textBox2.Text == admin.AdminID) && (textBox4.Text == admin.AdminPassword))
             {
                 FormControls.Id= textBox2.Text;
                 admin.AdminID = textBox2.Text;

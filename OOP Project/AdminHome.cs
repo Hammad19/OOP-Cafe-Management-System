@@ -72,7 +72,7 @@ namespace OOP_Project
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
-            Admin admin = Admin.GetInstance("adm123");
+            Admin admin = Admin.GetInstance();
             if (comboBox1.SelectedItem.ToString() == "ALL")
             {
                 dataGridView1.Rows.Clear();
@@ -88,7 +88,7 @@ namespace OOP_Project
         private void button2_Click(object sender, EventArgs e)
         {
             updatedelete.updatebill();
-            Admin admin = Admin.GetInstance("adm123");
+            Admin admin = Admin.GetInstance();
             if ((comboBox1.SelectedItem.ToString() == "") || (comboBox1.SelectedItem.ToString() == "ALL"))
             {
                 dataGridView1.Rows.Clear();
@@ -121,7 +121,7 @@ namespace OOP_Project
         private void button10_Click(object sender, EventArgs e)
         {
             updatedelete.deletebill();
-            Admin admin = Admin.GetInstance("adm123");
+            Admin admin = Admin.GetInstance();
             if (comboBox1.SelectedItem.ToString() == "ALL")
             {
                 dataGridView1.Rows.Clear();

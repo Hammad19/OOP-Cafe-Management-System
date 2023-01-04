@@ -109,7 +109,7 @@ namespace OOP_Project
         public void FinalizeOrder(DataGridView dgv,int bill_id) //paisa minus
         {
             //Builder Pattern
-            OrderedItems oi;
+            FoodItems oi;
             OrderedItemsBuilder builder = new OrderedItemsBuilder();
             Bll_Order ord = new Bll_Order();
             Bll_Bill bill = new Bll_Bill();
@@ -124,7 +124,7 @@ namespace OOP_Project
                     double Total_bill_for_Each_Row = 0;
                     Total_bill_for_Each_Row = (Convert.ToDouble(dgv.Rows[i].Cells[2].Value) * Convert.ToDouble(dgv.Rows[i].Cells[3].Value));
                     ord.AddOrder(dgv.Rows[i].Cells[0].Value.ToString(), dgv.Rows[i].Cells[1].Value.ToString(), dgv.Rows[i].Cells[2].Value.ToString(), dgv.Rows[i].Cells[3].Value.ToString(), Total_bill_for_Each_Row.ToString(), FormControls.Id);
-                    oi = new OrderedItems();
+                    oi = new FoodItems();
                     oi.Name = dgv.Rows[i].Cells[1].Value.ToString();
                     oi.Price = Convert.ToInt32(dgv.Rows[i].Cells[2].Value.ToString());
                     oi.Qty = Convert.ToInt32(dgv.Rows[i].Cells[3].Value.ToString());

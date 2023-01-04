@@ -19,7 +19,7 @@ namespace OOP_Project
 
         private void AdminUserDetails_Load(object sender, EventArgs e)
         {
-            Admin admin = Admin.GetInstance("adm123");
+            Admin admin = Admin.GetInstance();
             admin.ShowDetails(dataGridView1);
         }
 
@@ -60,8 +60,6 @@ namespace OOP_Project
                 //gets a collection that contains all the rows
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
                 //populate the textbox from specific value of the coordinates of column and row.
-
-                
 
                     coc.CustomerID = Convert.ToInt32(row.Cells[0].Value);
                     coc.Firstname = row.Cells[1].Value.ToString();

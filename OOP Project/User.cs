@@ -10,13 +10,18 @@ using System.Windows.Forms;
 namespace OOP_Project
 {
 
-    public class CustomerCollection
+    public interface ICollection
+    {
+        CustomerIterator GetIterator();
+    }
+
+    public class CustomerCollection:ICollection
     {
         private List<Costumer> customer = new List<Costumer>();
 
         public CustomerIterator GetIterator()
         {
-            return new CustomerIterator(customer);
+            return new CustomerIterator(this);
         }
 
         public void AddCustomer(Costumer customer)
@@ -24,29 +29,44 @@ namespace OOP_Project
             this.customer.Add(customer);
         }
 
+
+        public Costumer GetCustomer(int index)
+        {
+            return customer[index];
+        }
+
+        public int Count
+        {
+            get { return customer.Count; }
+        }
     }
 
-    public class CustomerIterator
+
+    public interface IIterator
     {
-        private List<Costumer> customers;
+        bool HasNext();
+        Costumer Next();
+    }
+
+    public class CustomerIterator : IIterator
+    {
+        private CustomerCollection CustomerCollection;
         public int index;
 
-        public CustomerIterator(List<Costumer> customers)
+        public CustomerIterator(CustomerCollection collection)
         {
-            this.customers = customers;
+            this.CustomerCollection = collection;
             index = 0;
-        
         }
 
         public bool HasNext()
         {
-            return index < customers.Count;
+            return index <CustomerCollection.Count;
         }
 
         public Costumer Next()
         {
-            return customers[index++];
-            
+            return CustomerCollection.GetCustomer(index++);
         }
     }
 
@@ -145,7 +165,7 @@ namespace OOP_Project
         private int balance = 1000 ;
 
         public Costumer() { }
-         public Costumer(string CustomerID,string FirstName,string LastName,string Gender,string City,string Country,string Phone,string Email,string DateOfBirth,string Balance):base(FirstName,LastName,Gender,City,Country,Phone,Email,DateOfBirth)
+        public Costumer(string CustomerID,string FirstName,string LastName,string Gender,string City,string Country,string Phone,string Email,string DateOfBirth,string Balance):base(FirstName,LastName,Gender,City,Country,Phone,Email,DateOfBirth)
         {
             this.CustomerID = Convert.ToInt32(CustomerID);
             this.balance = Convert.ToInt32(Balance);
@@ -393,17 +413,17 @@ namespace OOP_Project
 
          public void GetDetails(DataGridView dgv, CustomerCollection customerCollection)
          {
-             //Costumer c;
-             //Bll_Customer search = new Bll_Customer();
-             //DataTable dt = new DataTable();
-             //dt = search.ShowDetailsForAdmin();
+             Costumer c;
+             Bll_Customer search = new Bll_Customer();
+             DataTable dt = new DataTable();
+             dt = search.ShowDetailsForAdmin();
 
-             //for (int i = 0; i < dt.Rows.Count; i++)
-             //{
-             //    c = new Costumer(dt.Rows[i]["ID"].ToString(), dt.Rows[i]["F_Name"].ToString(), dt.Rows[i]["L_Name"].ToString(), dt.Rows[i]["Gender"].ToString(), dt.Rows[i]["City"].ToString(), dt.Rows[i]["Country"].ToString(), dt.Rows[i]["Phone"].ToString(), dt.Rows[i]["Email"].ToString(), dt.Rows[i]["DOB"].ToString(), dt.Rows[i]["Balance"].ToString());
-             //    customerCollection.AddCustomer(c);
+             for (int i = 0; i < dt.Rows.Count; i++)
+             {
+                 c = new Costumer(dt.Rows[i]["ID"].ToString(), dt.Rows[i]["F_Name"].ToString(), dt.Rows[i]["L_Name"].ToString(), dt.Rows[i]["Gender"].ToString(), dt.Rows[i]["City"].ToString(), dt.Rows[i]["Country"].ToString(), dt.Rows[i]["Phone"].ToString(), dt.Rows[i]["Email"].ToString(), dt.Rows[i]["DOB"].ToString(), dt.Rows[i]["Balance"].ToString());
+                 customerCollection.AddCustomer(c);
 
-             //}
+             }
 
          }
 

@@ -105,9 +105,12 @@ namespace OOP_Project
     }
 
 
-   
+    public interface Builder
+    {
+        OrderedItems Build();
+    }
 
-    public class OrderedItemsBuilder
+    public class OrderedItemsBuilder:Builder
     {
         private readonly OrderedItems orderedItems = new OrderedItems();
 

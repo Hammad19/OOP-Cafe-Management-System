@@ -14,12 +14,12 @@ namespace OOP_Project
     public partial class Login : Form
     {
 
-        Admin admin;
+        Admin admin = Admin.GetInstance("adm123");
         
         public Login()
         {
             InitializeComponent();
-             admin = Admin.GetInstance("adm123");
+             
         }
 
        

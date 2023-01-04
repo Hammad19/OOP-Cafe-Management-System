@@ -10,8 +10,7 @@ using System.Data;
 
 namespace OOP_Project
 {
-    class AdminControls
-       
+    class AdminControls 
     {
         public void AddUserIDtoCombobox(ComboBox comboBox1)
         {
@@ -114,7 +113,7 @@ namespace OOP_Project
         }
     }
 
-    public class OrderedItems : FoodItems
+    public class OrderedItems:FoodItems
     {
         int countorders;
         public int COUNTORDERS { get { return countorders; } }

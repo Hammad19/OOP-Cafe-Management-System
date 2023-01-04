@@ -11,7 +11,7 @@ namespace BusinessLogicLayer
     public class Bll_Customer
     {
         ICustomerDataAccess dataAccessLayer;
-        
+
         public Bll_Customer()
         {
             dataAccessLayer = DataAccessFactory.GetDataAccessObject();
@@ -78,7 +78,6 @@ namespace BusinessLogicLayer
             dataAccessLayer.CloseConnection();
         }
 
-
         public DataTable LoginCustomer(string _ID)
         {
             DataTable de = new DataTable();
@@ -90,8 +89,7 @@ namespace BusinessLogicLayer
             return de;
         }
 
-      
-
+     
         public DataTable ShowDetailsForAdmin()
         {
             DataTable de = new DataTable();
